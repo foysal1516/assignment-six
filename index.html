@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-Six</title>
+    <!-- daisy ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- custom style css link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <!-- nav style -->
+        <nav class="w-10/12 mx-auto flex justify-between items-center my-2">
+            <div class="flex gap-2">
+                <img class="w-8" src="/images/logo.webp" alt="">
+                <h3 class="text-xl font-bold">Paddy</h3>
+            </div>
+            <div class="space-x-3">
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="w-6">
+                <img src="https://img.icons8.com/?size=64&id=22396&format=png" alt="">
+            </div>
+        </nav>
+        <!-- banner style -->
+        <div>
+            <div class="text-center mt-7 space-y-3">
+                <p class="text-sm text-gray-700">Bringing Families Together ❤️‍🔥 </p>
+                <h1 class="text-4xl font-bold">Your Path to Adoption <br> Starts Here</h1>
+                <p class="text-xs text-gray-700">A pet is any animal that is tamed and trained to be kept as a
+                    companion, such as a dog or a bird. To pet means to stroke <br>or rub an animal's fur or body in a
+                    cherished way.</p>
+                <button class="btn bg-[#0E7A81] text-white">View More</button>
+                <div class="flex justify-center">
+                    <img src="images/pet.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="w-10/12 mx-auto">
+        <!-- adop your best friends section -->
+        <section>
+            <div class="text-center space-y-3">
+                <h3 class="text-2xl font-bold">Adopt Your Best Friend</h3>
+                <p class="text-sm text-gray-600">Adopting a pet, like from Best Friends Animal Society, can be a
+                    rewarding way to find <br>a companion and provide a second chance for an animal in need.
+                </p>
+                <div id="categories-container" class="flex justify-between my-4">
+
+                </div>
+            </div>
+        </section>
+        <!-- carts section -->
+        <section>
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold">Best Deal For you</h3>
+                <button id="sort-pet-card" class="btn bg-[#0E7A81] text-white">Sort by Price</button>
+            </div>
+            <div id="pets-container" class="flex">
+                <div id="card-container" class="grid grid-cols-3 gap-3 shadow-xl p-3 rounded basis-[70%]">
+
+                </div>
+                <div id="like-container" class="grid grid-cols-2 gap-1 shadow-xl p-3 rounded basis-[30%]">
+                    <div><img src="images/error.webp" alt=""></div>
+                    <div><img src="images/new-product.png" alt=""></div>
+                    <div><img src="images/pet.webp" alt=""></div>
+                </div>
+
+            </div>
+            <!-- You can open the modal using ID.showModal() method -->
+            <!-- counter modal -->
+            <button id="show_modal_content" class="btn hidden" onclick="custom_modal_1.showModal()">open modal</button>
+            <dialog id="custom_modal_1" class="modal">
+                <div class="modal-box w-11/12 max-w-[350px]">
+                    <div class="text-center">
+                        <img class="w-10 mx-auto" src="images/new-product.png" alt="">
+                        <h2 class="text-xl font-bold">Congrates</h2>
+                        <p>Adoption process is start for your pet</p>
+                        <h3 id="valueId" class="text-4xl font-extrabold">0</h3>
+                    </div>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button, it will close the modal -->
+                            <button id="modal_close" class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+            <!-- Details Modal -->
+            <!-- You can open the modal using ID.showModal() method -->
+            <button id="detailsModal" class="btn hidden" onclick="details_modal_4.showModal()">open modal</button>
+            <dialog id="details_modal_4" class="modal">
+                <div class="modal-box w-11/12 max-w-2xl">
+                    <div id="details-card-container">
+
+                    </div>
+
+                    <div class="modal-action">
+                        <form method="dialog" class="w-full">
+                            <!-- if there is a button, it will close the modal -->
+                            <button class="btn w-full text-white bg-[#0E7A81]">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </section>
+    </main>
+
+    <footer class="w-10/12 mx-auto">
+        <div class="flex justify-between bg-[#131313] px-32 py-24">
+            <div>
+                <div class="flex space-x-2 mb-3">
+                    <img class="w-7" src="https://img.icons8.com/?size=48&id=tikLnbfvcuTP&format=png" alt="">
+                    <h3 class="text-2xl font-bold text-white">Peddy</h3>
+                </div>
+                <div class="text-white text-xs space-y-2 mb-3">
+                    <p>Location: av. Washington 165, NY CA 54003</p>
+                    <p>Phone: +31 85 964 47 25</p>
+                    <p>Email: info@yourdomain.com</p>
+                    <p>Openings hours: 9.00 AM - 5.00 PM</p>
+                </div>
+                <div class="flex space-x-3">
+                    <img class="w-7" src="https://img.icons8.com/?size=96&id=118497&format=png" alt="">
+                    <img class="w-7" src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png" alt="">
+                    <img class="w-7" src="https://img.icons8.com/?size=96&id=9a46bTk3awwI&format=png" alt="">
+                    <img class="w-7" src="https://img.icons8.com/?size=96&id=NHuAZUgwkbJo&format=png" alt="">
+                </div>
+            </div>
+            <div>
+                <p class="text-white font-bold mb-3">Useful Links</p>
+                <ul class="text-xs text-white space-y-2">
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Animals</li>
+                    <li>Foundation</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div>
+                <p class="text-white font-bold mb-3">Drop a Message</p>
+                <div>
+                    <input class="bg-[#808080] pl-2 py-3 rounded-2xl text-white font-bold mb-3" type="email"
+                        placeholder="Enter Your Email">
+                    <br>
+                    <button class="px-20 py-3 rounded-2xl bg-[#0E7A81] text-white font-bold">Suscribe</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
