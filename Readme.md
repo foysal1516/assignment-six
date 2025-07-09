@@ -9,6 +9,8 @@ The platform highlights both common and exotic pets like dogs, cats, rabbits, an
 
 With its clean design and easy navigation, Peddy makes the process of adopting a pet simple and inviting.
 
+# Five Key Features
+
 ## 1. Category-Based Pet Browsing
 Users can easily browse pets by categories such as Cat, Dog, Rabbit, and Bird for a more personalized search experience.
 
