@@ -13,7 +13,7 @@ document.getElementById("sort-pet-card").addEventListener("click", function () {
         .then(data => {
             console.log(data.pets)
             const sortPets = data.pets.sort(function (a, b) {
-                return a.price - b.price;
+                return b.price - a.price;
             })
             displayAllPets(sortPets)
         })
@@ -58,6 +58,10 @@ const loadCategoryPets = (name, id) => {
     fetch(`https://openapi.programming-hero.com/api/peddy/category/${name}`)
         .then(res => res.json())
         .then(data => {
+            // setTimeout(() => {
+            //     const cardContainer = document.getElementById('card-container')
+            //     cardContainer.innerHTML = 'loading'
+            // }, 2000)
             displayAllPets(data.data)
             activeBtns();
             const btn = document.getElementById(id);
@@ -143,9 +147,9 @@ const displayAllPets = pets => {
 const likedPet = img => {
     const likeContainer = document.getElementById("like-container")
     const div = document.createElement("div");
-    // div.classList.add('h-[80px]', 'w-[80px]')
+    div.classList.add('h-[150px]', 'w-[150px]', 'rounded-md')
     div.innerHTML = `
-    <img src="${img}"/>
+    <img src="${img}" class="rounded-md w-full h-full"/>
     `
     likeContainer.appendChild(div)
 }
