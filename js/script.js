@@ -54,15 +54,25 @@ const loadPetDetails = (id) => {
 
 // fetch pet according to categories
 
-const loadCategoryPets = (name, id) => {
+const loadCategoryPets = async (name, id) => {
     fetch(`https://openapi.programming-hero.com/api/peddy/category/${name}`)
         .then(res => res.json())
         .then(data => {
-            // setTimeout(() => {
-            //     const cardContainer = document.getElementById('card-container')
-            //     cardContainer.innerHTML = 'loading'
-            // }, 2000)
-            displayAllPets(data.data)
+            const cardContainer = document.getElementById('card-container');
+            cardContainer.innerHTML = `
+            <span class="loading loading-bars loading-xs"></span>
+            <span class="loading loading-bars loading-md"></span>
+            <span class="loading loading-bars loading-sm"></span>
+            <span class="loading loading-bars loading-lg"></span>
+            <span class="loading loading-bars loading-xl"></span>
+            `
+            setTimeout(() => {
+                displayAllPets(data.data)
+            }, 2000)
+
+
+
+
             activeBtns();
             const btn = document.getElementById(id);
             btn.classList.add('active')
@@ -90,7 +100,6 @@ const displayCategories = categories => {
 // display all pets
 
 const displayAllPets = pets => {
-    console.log(pets.length)
     const cardContainer = document.getElementById('card-container')
     const petsContainer = document.getElementById("pets-container");
     cardContainer.innerHTML = "";
@@ -102,7 +111,7 @@ const displayAllPets = pets => {
             <img class="w-[40%]" src="images/error.webp"/>
         </div>
         `
-        // return;S
+        // return;
     }
     else {
         petsContainer.classList.add('flex')
